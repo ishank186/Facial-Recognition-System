@@ -1,158 +1,84 @@
-Facial Recognition System:
+# Face Recognition Attendance System
 
+## Overview
+The **Face Recognition Attendance System** is a Python-based project designed to recognize faces and log attendance. This project utilizes machine learning and computer vision techniques for face detection and recognition. The system captures live video input from a webcam, detects faces in real-time, and recognizes registered users.
 
-🚀 About the Project
-The Facial Recognition System is a Python-based application designed to detect and recognize faces from images or video streams. It leverages state-of-the-art machine learning and computer vision libraries to ensure high accuracy and reliability. This system can be seamlessly integrated into applications like:
-This project is a Face Recognition-based Attendance System that uses OpenCV for face detection and K-Nearest Neighbors (KNN) for face recognition. It appears to store attendance records in a structured format.
+## 🛠️ Tech Stack
+- **Programming Language**: Python
+- **Libraries Used**:
+  - OpenCV: For face detection and image processing.
+  - NumPy: For matrix operations.
+  - Scikit-learn: For the KNN algorithm.
+  - CSV: For attendance logging.
+  - PyWin32: For text-to-speech functionality.
 
-Attendance Tracking
-Access Control Systems
-Secure Authentication Platforms
+## ⚙️ Features
+- Real-time face detection using OpenCV.
+- Face recognition using the K-Nearest Neighbors (KNN) algorithm.
+- User-friendly interface for collecting face data.
+- Attendance logging in CSV format.
 
-🛠️ Tech Stack
-Programming Language: Python 3.7+
-Libraries:
-OpenCV (Image Processing)
-Dlib (Face Recognition)
-Face_recognition (Face Encoding and Matching)
-NumPy (Data Manipulation)
-Database: MySQL or SQLite
+## 📁 Folder Structure
+```
+face_recognition_attendance_system/
+├── data/
+│   ├── haarcascade_frontalface_default.xml
+│   ├── names.pkl
+│   └── faces_data.pkl
+├── Attendance/
+├── face.py
+└── new_register.py
+```
+1. **`data/`**: Contains the Haarcascade XML file for face detection and pickle files for storing user data.
+2. **`Attendance/`**: Stores daily attendance records in CSV format.
+3. **`face.py`**: The main script for face recognition and attendance logging.
+4. **`new_register.py`**: Script to register new users by capturing their face data.
 
-🌟 Features
-📸 Real-Time Face Detection: Automatically detect faces in a live feed or images.
-🎭 Face Recognition: Match detected faces with a predefined database.
-🔄 High Accuracy: Uses advanced algorithms for precise recognition.
-🗃️ Database Support: Easily store and retrieve user data for face matching.
-⚡ Scalable: Can handle large datasets of known faces.
+## 🚀 Installation and Setup
+### Prerequisites
+- Python 3.8 or later installed on your system.
+- A working webcam.
 
+### Dependencies
+Install the required Python libraries:
+```bash
+pip install opencv-python numpy scikit-learn pywin32
+```
 
-Here’s a README.md file styled and written similarly to the example you referenced:
+## 📝 Usage
+### Step 1: Register a New User
+Run the `new_register.py` script to register a new user:
+```bash
+python new_register.py
+```
+1. Enter the user's name when prompted.
+2. The system will collect 100 face samples using the webcam.
+3. The face data will be stored in `data/names.pkl` and `data/faces_data.pkl`.
 
-Facial Recognition System
+### Step 2: Start Face Recognition
+Run the `face.py` script to start face recognition:
+```bash
+python face.py
+```
+1. The system will detect and recognize faces in real-time.
+2. Recognized faces are displayed on the video feed with their names.
+3. Attendance is logged in the `Attendance/` folder as a CSV file.
 
-🚀 About the Project
-The Facial Recognition System is a Python-based application designed to detect and recognize faces from images or video streams. It leverages state-of-the-art machine learning and computer vision libraries to ensure high accuracy and reliability. This system can be seamlessly integrated into applications like:
+### Exiting the Program
+- Press **`q`** to exit the video feed.
 
-Attendance Tracking
-Access Control Systems
-Secure Authentication Platforms
-🛠️ Tech Stack
-Programming Language: Python 3.7+
-Libraries:
-OpenCV (Image Processing)
-Dlib (Face Recognition)
-Face_recognition (Face Encoding and Matching)
-NumPy (Data Manipulation)
-Database: MySQL or SQLite
-Hardware Requirements:
-Minimum 4GB RAM
-Camera (Webcam or External)
-🌟 Features
-📸 Real-Time Face Detection: Automatically detect faces in a live feed or images.
-🎭 Face Recognition: Match detected faces with a predefined database.
-🔄 High Accuracy: Uses advanced algorithms for precise recognition.
-🗃️ Database Support: Easily store and retrieve user data for face matching.
-⚡ Scalable: Can handle large datasets of known faces.
+## 🔍 How it Works
+1. **Face Detection**:
+   - Uses the Haarcascade classifier to detect faces in the video feed.
+2. **Face Recognition**:
+   - Captured faces are resized and flattened into feature vectors.
+   - The K-Nearest Neighbors (KNN) algorithm is used for recognition.
+3. **Attendance Logging**:
+   - Recognized names and timestamps are logged into a CSV file named `Attendance_<date>.csv`.
 
+## 📧 Contact
+For any questions or suggestions, feel free to contact:
+- **Name**: Ishank Khare
+- **Email**: [your_email@example.com]
+- **GitHub**: [Ishank Khare](https://github.com/ishank186)
 
-📦 Folder Structure
-facial-recognition/
-│
-├── dataset/               # Images of known individuals (organized by subfolders)
-├── models/                # Pre-trained models and face encodings
-├── app.py                 # Main application script
-├── train_model.py         # Script to train the recognition model
-├── config.py              # Configuration for database and settings
-├── requirements.txt       # Python dependencies
-└── README.md              # Documentation
-
-4️⃣ Configure the Database
-CREATE DATABASE face_recognition;
-
-🖥️ Usage
-1️⃣ Add Known Faces
-Place images of individuals in the dataset/ folder.
-Use subfolders for each person (e.g., dataset/John).
-
-2️⃣ Train the System
-Encode the faces in the dataset:
-python train_model.py
-
-Here’s a README.md file styled and written similarly to the example you referenced:
-
-Facial Recognition System
-
-🚀 About the Project
-The Facial Recognition System is a Python-based application designed to detect and recognize faces from images or video streams. It leverages state-of-the-art machine learning and computer vision libraries to ensure high accuracy and reliability. This system can be seamlessly integrated into applications like:
-
-Attendance Tracking
-Access Control Systems
-Secure Authentication Platforms
-🛠️ Tech Stack
-Programming Language: Python 3.7+
-Libraries:
-OpenCV (Image Processing)
-Dlib (Face Recognition)
-Face_recognition (Face Encoding and Matching)
-NumPy (Data Manipulation)
-Database: MySQL or SQLite
-Hardware Requirements:
-Minimum 4GB RAM
-Camera (Webcam or External)
-🌟 Features
-📸 Real-Time Face Detection: Automatically detect faces in a live feed or images.
-🎭 Face Recognition: Match detected faces with a predefined database.
-🔄 High Accuracy: Uses advanced algorithms for precise recognition.
-🗃️ Database Support: Easily store and retrieve user data for face matching.
-⚡ Scalable: Can handle large datasets of known faces.
-📦 Folder Structure
-plaintext
-Copy
-Edit
-facial-recognition/
-│
-├── dataset/               # Images of known individuals (organized by subfolders)
-├── models/                # Pre-trained models and face encodings
-├── app.py                 # Main application script
-├── train_model.py         # Script to train the recognition model
-├── config.py              # Configuration for database and settings
-├── requirements.txt       # Python dependencies
-└── README.md              # Documentation
-⚙️ Installation
-1️⃣ Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/your-username/facial-recognition.git
-cd facial-recognition
-2️⃣ Set Up a Virtual Environment
-bash
-Copy
-Edit
-python -m venv env
-source env/bin/activate      # On Windows: env\Scripts\activate
-3️⃣ Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4️⃣ Configure the Database
-Create a MySQL database:
-sql
-Copy
-Edit
-CREATE DATABASE face_recognition;
-Update the config.py file with your database credentials.
-🖥️ Usage
-1️⃣ Add Known Faces
-Place images of individuals in the dataset/ folder.
-Use subfolders for each person (e.g., dataset/John).
-2️⃣ Train the System
-Encode the faces in the dataset:
-bash
-Copy
-Edit
-python train_model.py
-3️⃣ Start the Application
-Run the app to detect and recognize faces:
-python app.py
