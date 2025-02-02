@@ -1,7 +1,9 @@
+Facial Recognition System:
 
-Facial Recognition System
+
 🚀 About the Project
 The Facial Recognition System is a Python-based application designed to detect and recognize faces from images or video streams. It leverages state-of-the-art machine learning and computer vision libraries to ensure high accuracy and reliability. This system can be seamlessly integrated into applications like:
+This project is a Face Recognition-based Attendance System that uses OpenCV for face detection and K-Nearest Neighbors (KNN) for face recognition. It appears to store attendance records in a structured format.
 
 Attendance Tracking
 Access Control Systems
